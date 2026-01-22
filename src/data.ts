@@ -88,36 +88,36 @@ class ApiService {
       },
       skills: {
         Frontend: [
-          { name: 'React/Preact', level: 95, color: 'bg-blue-500' },
-          { name: 'TypeScript', level: 90, color: 'bg-blue-600' },
-          { name: 'Tailwind CSS', level: 88, color: 'bg-cyan-500' },
-          { name: 'Next.js', level: 85, color: 'bg-gray-800' },
-          { name: 'Vue.js', level: 80, color: 'bg-green-500' },
-          { name: 'Sass/SCSS', level: 85, color: 'bg-pink-500' }
+          { name: 'React/Preact', level: 95, color: 'bg-slate-600' },
+          { name: 'TypeScript', level: 90, color: 'bg-slate-700' },
+          { name: 'Tailwind CSS', level: 88, color: 'bg-slate-500' },
+          { name: 'Next.js', level: 85, color: 'bg-slate-800' },
+          { name: 'Vue.js', level: 80, color: 'bg-slate-600' },
+          { name: 'Sass/SCSS', level: 85, color: 'bg-slate-700' }
         ],
         Backend: [
-          { name: 'Node.js', level: 90, color: 'bg-green-600' },
-          { name: 'Python', level: 85, color: 'bg-yellow-500' },
-          { name: 'Express.js', level: 88, color: 'bg-gray-700' },
-          { name: 'PostgreSQL', level: 82, color: 'bg-blue-700' },
-          { name: 'MongoDB', level: 80, color: 'bg-green-700' },
-          { name: 'REST APIs', level: 92, color: 'bg-orange-500' }
+          { name: 'Node.js', level: 90, color: 'bg-slate-700' },
+          { name: 'Python', level: 85, color: 'bg-slate-600' },
+          { name: 'Express.js', level: 88, color: 'bg-slate-800' },
+          { name: 'PostgreSQL', level: 82, color: 'bg-slate-700' },
+          { name: 'MongoDB', level: 80, color: 'bg-slate-600' },
+          { name: 'REST APIs', level: 92, color: 'bg-slate-700' }
         ],
         DevOps: [
-          { name: 'Docker', level: 85, color: 'bg-blue-500' },
-          { name: 'AWS', level: 80, color: 'bg-orange-600' },
-          { name: 'CI/CD', level: 82, color: 'bg-purple-500' },
-          { name: 'Git', level: 95, color: 'bg-red-500' },
-          { name: 'Linux', level: 78, color: 'bg-yellow-600' },
-          { name: 'Nginx', level: 75, color: 'bg-green-600' }
+          { name: 'Docker', level: 85, color: 'bg-slate-700' },
+          { name: 'AWS', level: 80, color: 'bg-slate-600' },
+          { name: 'CI/CD', level: 82, color: 'bg-slate-700' },
+          { name: 'Git', level: 95, color: 'bg-slate-800' },
+          { name: 'Linux', level: 78, color: 'bg-slate-600' },
+          { name: 'Nginx', level: 75, color: 'bg-slate-700' }
         ],
         Tools: [
-          { name: 'VS Code', level: 95, color: 'bg-blue-600' },
-          { name: 'Figma', level: 80, color: 'bg-purple-600' },
-          { name: 'Postman', level: 88, color: 'bg-orange-500' },
-          { name: 'Webpack', level: 75, color: 'bg-blue-400' },
-          { name: 'Vite', level: 90, color: 'bg-purple-500' },
-          { name: 'ESLint', level: 85, color: 'bg-indigo-500' }
+          { name: 'VS Code', level: 95, color: 'bg-slate-700' },
+          { name: 'Figma', level: 80, color: 'bg-slate-600' },
+          { name: 'Postman', level: 88, color: 'bg-slate-700' },
+          { name: 'Webpack', level: 75, color: 'bg-slate-500' },
+          { name: 'Vite', level: 90, color: 'bg-slate-700' },
+          { name: 'ESLint', level: 85, color: 'bg-slate-800' }
         ]
       },
       projects: [

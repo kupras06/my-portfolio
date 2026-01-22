@@ -30,13 +30,13 @@ export default function Contact({ data }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Let's Work Together
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
           </p>
         </div>
@@ -44,18 +44,18 @@ export default function Contact({ data }: ContactProps) {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
+            <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-8">
               Get In Touch
             </h3>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                <div className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-slate-700 dark:text-slate-300" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-300">{data.email}</p>
+                  <h4 className="font-semibold text-slate-900 dark:text-white">Email</h4>
+                  <p className="text-slate-600 dark:text-slate-300">{data.email}</p>
                 </div>
               </div>
 
@@ -70,24 +70,24 @@ export default function Contact({ data }: ContactProps) {
               </div> */}
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                <div className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-slate-700 dark:text-slate-300" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white">Location</h4>
-                  <p className="text-gray-600 dark:text-gray-300">{data.location}</p>
+                  <h4 className="font-semibold text-slate-900 dark:text-white">Location</h4>
+                  <p className="text-slate-600 dark:text-slate-300">{data.location}</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
+              <h4 className="font-semibold text-slate-900 dark:text-white mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
                   href={data.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
                   <Github className="w-5 h-5" />
                 </a>
@@ -95,7 +95,7 @@ export default function Contact({ data }: ContactProps) {
                   href={data.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -103,7 +103,7 @@ export default function Contact({ data }: ContactProps) {
                   href={data.social.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
@@ -112,11 +112,11 @@ export default function Contact({ data }: ContactProps) {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
+          <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                     Name
                   </label>
                   <input
@@ -126,12 +126,12 @@ export default function Contact({ data }: ContactProps) {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-700 focus:border-transparent transition-colors"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                     Email
                   </label>
                   <input
@@ -141,14 +141,14 @@ export default function Contact({ data }: ContactProps) {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-700 focus:border-transparent transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                   Subject
                 </label>
                 <input
@@ -158,13 +158,13 @@ export default function Contact({ data }: ContactProps) {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-700 focus:border-transparent transition-colors"
                   placeholder="Project Discussion"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-900 dark:text-white mb-2">
                   Message
                 </label>
                 <textarea
@@ -174,14 +174,14 @@ export default function Contact({ data }: ContactProps) {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-700 focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-primary text-white py-4 px-6 rounded-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-primary text-white py-4 px-6 rounded-lg font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>

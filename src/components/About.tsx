@@ -30,23 +30,23 @@ export default function About({ data }: AboutProps) {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="about" className="py-20 bg-slate-50 dark:bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             About Me
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
             {data.summary}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+            <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
               My Journey
             </h3>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
               {data.journey.map((paragraph) => (
                 <p key={paragraph.id}>{paragraph.text}</p>
               ))}
@@ -54,7 +54,7 @@ export default function About({ data }: AboutProps) {
           </div>
 
           <div className="relative">
-            <div className="relative z-10 bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl">
+            <div className="relative z-10 bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg">
               <img
                 src={data.picture}
                 alt="Developer workspace"
@@ -62,12 +62,12 @@ export default function About({ data }: AboutProps) {
               />
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{data.experience.years}+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+                  <div className="text-2xl font-bold text-slate-700 dark:text-slate-300">{data.experience.years}+</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">{data.experience.projects}+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
+                  <div className="text-2xl font-bold text-slate-700 dark:text-slate-300">{data.experience.projects}+</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
                 </div>
               </div>
             </div>
@@ -77,14 +77,14 @@ export default function About({ data }: AboutProps) {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {highlights.map((highlight) => (
-            <div key={highlight.title} className="text-center p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg card-hover">
-              <div className="text-blue-600 dark:text-blue-400 mb-4 flex justify-center">
+            <div key={highlight.title} className="text-center p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md card-hover">
+              <div className="text-slate-700 dark:text-slate-300 mb-4 flex justify-center">
                 {highlight.icon}
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              <h4 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
                 {highlight.title}
               </h4>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 {highlight.description}
               </p>
             </div>
