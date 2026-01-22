@@ -30,9 +30,6 @@ function App() {
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
-  if (error || !data) {
-    return <ErrorMessage message={error || 'Failed to load portfolio data'} onRetry={refetch} />;
-  }
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
