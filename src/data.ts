@@ -79,8 +79,8 @@ class ApiService {
         phone: "+1 (555) 123-4567",
         location: "Bangalore, India",
         social: {
-          github: "https://github.com",
-          linkedin: "https://linkedin.com",
+          github: "https://github.com/kupras06",
+          linkedin: "https://linkedin.com/kupras06",
           twitter: "https://twitter.com"
         }
       },
