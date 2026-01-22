@@ -55,6 +55,8 @@ class ApiService {
   }
 
   async fetchPortfolioData(): Promise<PortfolioData> {
+      return this.getFallbackData();
+    
     // Check if we have valid cached data
     try {
       const response = await fetch('https://api.npoint.io/e279faa19031fb9954ae');
@@ -65,7 +67,6 @@ class ApiService {
     } catch (error) {
       console.error('Failed to fetch portfolio data:', error);
       // Return fallback data if API fails
-      return this.getFallbackData();
     }
   }
 
