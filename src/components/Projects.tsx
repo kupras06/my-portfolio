@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-preact';
 import type { ProjectData } from '../data';
 
 interface ProjectsProps {

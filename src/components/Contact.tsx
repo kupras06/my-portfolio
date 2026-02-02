@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-preact';
 import type { PersonalData } from '../data';
 
 interface ContactProps {

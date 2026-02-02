@@ -1,4 +1,4 @@
-import { Code, Coffee, Users, Zap } from 'lucide-react';
+import { Code, Coffee, Users, Zap } from 'lucide-preact';
 import type { AboutData } from '../data';
 
 

@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-preact';
 import type { PersonalData } from '../data';
 
 export default function Hero({ data }: { data: PersonalData }) {

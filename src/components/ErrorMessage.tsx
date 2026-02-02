@@ -1,4 +1,4 @@
-import { RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-preact';
 
 interface ErrorMessageProps {
   message: string;

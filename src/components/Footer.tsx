@@ -1,4 +1,4 @@
-import { Heart, Code } from 'lucide-react';
+import { Heart, Code } from 'lucide-preact';
 
 export default function Footer() {
   return (

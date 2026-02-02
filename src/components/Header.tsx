@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-preact';
 
 interface HeaderProps {
   darkMode: boolean;

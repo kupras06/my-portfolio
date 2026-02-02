@@ -1,11 +1,20 @@
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [preact()],
+  plugins: [preact(), tailwindcss()],
   base: '/my-portfolio/', // Match your repository name
-
+  resolve: {
+    alias: {
+      'react': 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat',
+      'react/jsx-runtime': 'preact/jsx-runtime',
+      '@': '/Users/prashanthkumar/Developer/portfolio/src',
+    },
+  },
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    exclude: ['lucide-preact'],
   },
 });
