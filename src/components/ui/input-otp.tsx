@@ -1,62 +1,83 @@
+import { RiSubtractLine } from "@remixicon/react";
 import { OTPInput, OTPInputContext } from "input-otp";
-import { Dot } from "lucide-preact";
-
+import type { ComponentProps } from "preact";
 import { cn } from "@/lib/utils";
-import { ComponentPropsWithoutRef, ElementRef, forwardRef } from "preact/compat";
-import { useContext } from "preact/hooks";
 
-const InputOTP = forwardRef<ElementRef<typeof OTPInput>, ComponentPropsWithoutRef<typeof OTPInput>>(
-  ({ className, containerClassName, ...props }, ref) => (
-    <OTPInput
-      ref={ref}
-      containerClassName={cn("flex items-center gap-2 has-[:disabled]:opacity-50", containerClassName)}
-      className={cn("disabled:cursor-not-allowed", className)}
-      {...props}
-    />
-  ),
-);
-InputOTP.displayName = "InputOTP";
+function InputOTP({
+	className,
+	containerClassName,
+	...props
+}: ComponentProps<typeof OTPInput> & {
+	containerClassName?: string;
+}) {
+	return (
+		<OTPInput
+			data-slot="input-otp"
+			containerClassName={cn(
+				"cn-input-otp flex items-center has-disabled:opacity-50",
+				containerClassName,
+			)}
+			spellCheck={false}
+			class={cn("disabled:cursor-not-allowed", className)}
+			{...props}
+		/>
+	);
+}
 
-const InputOTPGroup = forwardRef<ElementRef<"div">, ComponentPropsWithoutRef<"div">>(
-  ({ className, ...props }, ref) => <div ref={ref} className={cn("flex items-center", className)} {...props} />,
-);
-InputOTPGroup.displayName = "InputOTPGroup";
+function InputOTPGroup({ className, ...props }: ComponentProps<"div">) {
+	return (
+		<div
+			data-slot="input-otp-group"
+			class={cn(
+				"has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 has-aria-invalid:border-destructive rounded-4xl has-aria-invalid:ring-[3px] flex items-center",
+				className,
+			)}
+			{...props}
+		/>
+	);
+}
 
-const InputOTPSlot = forwardRef<
-  ElementRef<"div">,
-  ComponentPropsWithoutRef<"div"> & { index: number }
->(({ index, className, ...props }, ref) => {
-  const inputOTPContext = useContext(OTPInputContext);
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];
+function InputOTPSlot({
+	index,
+	className,
+	...props
+}: ComponentProps<"div"> & {
+	index: number;
+}) {
+	const inputOtpContext = useContext(OTPInputContext);
+	const { char, hasFakeCaret, isActive } = inputOtpContext?.slots[index] ?? {};
 
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
-        isActive && "z-10 ring-2 ring-ring ring-offset-background",
-        className,
-      )}
-      {...props}
-    >
-      {char}
-      {hasFakeCaret && (
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="animate-caret-blink h-4 w-px bg-foreground duration-1000" />
-        </div>
-      )}
-    </div>
-  );
-});
-InputOTPSlot.displayName = "InputOTPSlot";
+	return (
+		<div
+			data-slot="input-otp-slot"
+			data-active={isActive}
+			class={cn(
+				"bg-input/30 border-input data-[active=true]:border-ring data-[active=true]:ring-ring/50 data-[active=true]:aria-invalid:ring-destructive/20 dark:data-[active=true]:aria-invalid:ring-destructive/40 aria-invalid:border-destructive data-[active=true]:aria-invalid:border-destructive size-9 border-y border-r text-sm transition-all outline-none first:rounded-l-4xl first:border-l last:rounded-r-4xl data-[active=true]:ring-[3px] relative flex items-center justify-center data-[active=true]:z-10",
+				className,
+			)}
+			{...props}
+		>
+			{char}
+			{hasFakeCaret && (
+				<div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+					<div class="animate-caret-blink bg-foreground h-4 w-px duration-1000 bg-foreground h-4 w-px" />
+				</div>
+			)}
+		</div>
+	);
+}
 
-const InputOTPSeparator = forwardRef<ElementRef<"div">, ComponentPropsWithoutRef<"div">>(
-  ({ ...props }, ref) => (
-    <div ref={ref} role="separator" {...props}>
-      <Dot />
-    </div>
-  ),
-);
-InputOTPSeparator.displayName = "InputOTPSeparator";
+function InputOTPSeparator({ ...props }: ComponentProps<"div">) {
+	return (
+		<div
+			data-slot="input-otp-separator"
+			class="[&_svg:not([class*='size-'])]:size-4 flex items-center"
+			role="separator"
+			{...props}
+		>
+			<RiSubtractLine />
+		</div>
+	);
+}
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
