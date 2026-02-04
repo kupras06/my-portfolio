@@ -1,8 +1,8 @@
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu";
 import { RiArrowDownSLine } from "@remixicon/react";
 import { cva } from "class-variance-authority";
+import type { ComponentPropsWithRef } from "preact/compat";
 import { cn } from "@/lib/utils";
-import { ComponentPropsWithRef } from "preact/compat";
 
 function NavigationMenu({
 	align = "start",

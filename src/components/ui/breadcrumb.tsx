@@ -20,7 +20,7 @@ function BreadcrumbList({ className, ...props }: ComponentProps<"ol">) {
 		<ol
 			data-slot="breadcrumb-list"
 			class={cn(
-				"text-muted-foreground gap-1.5 text-sm sm:gap-2.5 flex flex-wrap items-center break-words",
+				"text-muted-foreground gap-1.5 text-sm sm:gap-2.5 flex flex-wrap items-center wrap-break-word",
 				className,
 			)}
 			{...props}
@@ -58,11 +58,10 @@ function BreadcrumbLink({
 	});
 }
 
-function BreadcrumbPage({ className, ...props }: ComponentProps<"span">) {
+function BreadcrumbPage({ className, ...props }: ComponentProps<"link">) {
 	return (
-		<span
+		<link
 			data-slot="breadcrumb-page"
-			role="link"
 			aria-disabled="true"
 			aria-current="page"
 			class={cn("text-foreground font-normal", className)}

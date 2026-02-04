@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 function Pagination({ className, ...props }: ComponentProps<"nav">) {
 	return (
 		<nav
-			role="navigation"
 			aria-label="pagination"
 			data-slot="pagination"
 			class={cn("mx-auto flex w-full justify-center", className)}

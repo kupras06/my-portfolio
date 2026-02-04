@@ -1,5 +1,5 @@
+import type { ComponentProps } from "preact";
 import { cn } from "@/lib/utils";
-import { ComponentProps } from "preact";
 
 function Skeleton({ className, ...props }: ComponentProps<"div">) {
 	return (

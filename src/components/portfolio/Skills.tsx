@@ -7,6 +7,7 @@ const skillCategories = [
 			"JavaScript",
 			"TypeScript",
 			"React",
+			"Angular",
 			"Vue.js",
 			"Next.js",
 			"Remix",
@@ -47,6 +48,7 @@ const Skills = () => (
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
 							viewport={{ once: true }}
+							
 						>
 							<h3 class="text-lg font-medium mb-4 text-foreground">
 								{category.title}
@@ -62,7 +64,7 @@ const Skills = () => (
 											delay: skillIndex * 0.05,
 										}}
 										viewport={{ once: true }}
-										class="px-4 py-2 bg-background border border-border rounded-full text-sm text-foreground hover:border-accent hover:shadow-card transition-all duration-300"
+										class="px-4 py-2 bg-background border border-border rounded-full text-sm text-foreground hover:border-primary hover:shadow-card transition-all duration-300"
 									>
 										{skill}
 									</motion.span>

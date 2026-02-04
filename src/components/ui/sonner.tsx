@@ -6,7 +6,7 @@ import {
 	RiLoaderLine,
 } from "@remixicon/react";
 import { useTheme } from "next-themes";
-import { CSSProperties } from "preact";
+import type { CSSProperties } from "preact";
 import { Toaster as Sonner, type ToasterProps } from "sonner";
 
 const Toaster = ({ ...props }: ToasterProps) => {

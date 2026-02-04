@@ -2,10 +2,10 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 import useEmblaCarousel, {
 	type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { createContext, type ComponentProps } from "preact";
+import { type ComponentProps, createContext } from "preact";
+import { useCallback, useContext, useEffect, useState } from "preact/hooks";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useCallback, useContext, useEffect, useState } from "preact/hooks";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
