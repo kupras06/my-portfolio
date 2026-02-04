@@ -1,29 +1,37 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
-	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-	"files": {
-		"includes": [
-			"**",
-			"!!**/dist",
-			"!!**/components/ui"
-		]
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
 	},
-	"formatter": { "enabled": true, "indentStyle": "tab" },
+	"files": {
+		"includes": ["**", "!!**/dist", "!!**/components/ui"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-			"complexity": "off",
-			"nursery": "off",
-			"performance": "off",
-			"security": "on",
+			"complexity": "on",
+			"performance": "on",
+			"security": "off",
 			"suspicious": "on"
 		},
 		"includes": ["**", "!dist"]
 	},
-	"javascript": { "formatter": { "quoteStyle": "double" } },
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
 	"css": {
-		"parser": { "tailwindDirectives": true },
+		"parser": {
+			"tailwindDirectives": true
+		},
 		"formatter": null,
 		"linter": null,
 		"assist": null
@@ -97,12 +105,19 @@
 				}
 			}
 		},
-		{ "includes": ["**/*.{ts,tsx}"], "javascript": { "globals": [] } },
+		{
+			"includes": ["**/*.{ts,tsx}"],
+			"javascript": {
+				"globals": []
+			}
+		},
 		{
 			"includes": ["**/*.{ts,tsx}"],
 			"linter": {
 				"rules": {
-					"complexity": { "noArguments": "error" },
+					"complexity": {
+						"noArguments": "error"
+					},
 					"correctness": {
 						"noConstAssign": "off",
 						"noGlobalObjectCalls": "off",
@@ -113,7 +128,9 @@
 						"noUnreachable": "off",
 						"noUnreachableSuper": "off"
 					},
-					"style": { "useConst": "error" },
+					"style": {
+						"useConst": "error"
+					},
 					"suspicious": {
 						"noClassAssign": "off",
 						"noDuplicateClassMembers": "off",
@@ -134,8 +151,12 @@
 			"includes": ["**/*.{ts,tsx}"],
 			"linter": {
 				"rules": {
-					"complexity": { "noUselessTypeConstraint": "error" },
-					"correctness": { "noUnusedVariables": "error" },
+					"complexity": {
+						"noUselessTypeConstraint": "error"
+					},
+					"correctness": {
+						"noUnusedVariables": "error"
+					},
 					"style": {
 						"noCommonJs": "error",
 						"noNamespace": "error",
@@ -296,6 +317,10 @@
 	],
 	"assist": {
 		"enabled": true,
-		"actions": { "source": { "organizeImports": "on" } }
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
 	}
 }

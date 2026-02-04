@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, ExternalLink, FileText } from "lucide-preact";
 
-const OVERLEAF_LINK = "https://www.overleaf.com/read/mnqmxvmvqtyr#8ffbfa";
+const RESUME_LINK = "https://flowcv.com/resume/66ts7tevv8pe";
 
 const Resume = () => (
 	<section class="py-24 px-6">
@@ -29,7 +29,7 @@ const Resume = () => (
 				class="flex justify-center"
 			>
 				<a
-					href={OVERLEAF_LINK}
+					href={RESUME_LINK}
 					target="_blank"
 					rel="noopener noreferrer"
 					class="group relative bg-card border border-border rounded-2xl p-8 md:p-12 hover:border-foreground/30 hover:shadow-card-hover transition-all duration-300 max-w-md w-full"
@@ -38,16 +38,8 @@ const Resume = () => (
 						<div class="p-4 rounded-full bg-secondary group-hover:bg-accent/20 transition-colors duration-300">
 							<FileText class="w-8 h-8 text-foreground" />
 						</div>
-
-						<div>
-							<h3 class="text-xl font-medium mb-2">View Resume</h3>
-							<p class="text-sm text-muted-foreground mb-4">
-								Hosted on Overleaf • Always up-to-date
-							</p>
-						</div>
-
 						<div class="flex items-center gap-2 text-sm font-mono text-muted-foreground group-hover:text-foreground transition-colors">
-							<span>Open in Overleaf</span>
+							<h3 class="text-xl font-medium mb-2">View Resume</h3>
 							<ExternalLink class="w-4 h-4" />
 						</div>
 					</div>
