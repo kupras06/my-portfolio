@@ -18,7 +18,7 @@ const Hero = () => (
 				<img
 					src="https://avatars.githubusercontent.com/u/24810500?v=4"
 					alt="Prashanth Kumar"
-					class="w-28 h-28 rounded-full mx-auto border-4 border-background shadow-card-hover object-cover"
+					class="size-40 rounded-full mx-auto border-4 border-background shadow-card-hover object-cover"
 				/>
 			</motion.div>
 

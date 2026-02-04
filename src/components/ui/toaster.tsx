@@ -1,29 +1,44 @@
 import {
-	Toast,
-	ToastClose,
-	ToastDescription,
-	ToastProvider,
-	ToastTitle,
-	ToastViewport,
-} from "@/components/ui/toast";
-import { useToast } from "@/hooks/use-toast";
+	RiCheckboxCircleLine,
+	RiCloseCircleLine,
+	RiErrorWarningLine,
+	RiInformationLine,
+	RiLoaderLine,
+} from "@remixicon/react";
+import { useTheme } from "next-themes";
+import type { CSSProperties } from "preact";
+import { Toaster as Sonner, type ToasterProps } from "sonner";
 
-export function Toaster() {
-	const { toasts } = useToast();
+const Toaster = ({ ...props }: ToasterProps) => {
+	const { theme = "system" } = useTheme();
 
 	return (
-		<ToastProvider>
-			{toasts.map(({ id, title, description, action, ...props }) => (
-				<Toast key={id} {...props}>
-					<div class="grid gap-1">
-						{title && <ToastTitle>{title}</ToastTitle>}
-						{description && <ToastDescription>{description}</ToastDescription>}
-					</div>
-					{action}
-					<ToastClose />
-				</Toast>
-			))}
-			<ToastViewport />
-		</ToastProvider>
+		<Sonner
+			theme={theme as ToasterProps["theme"]}
+			class="toaster group"
+			icons={{
+				success: <RiCheckboxCircleLine class="size-4" />,
+				info: <RiInformationLine class="size-4" />,
+				warning: <RiErrorWarningLine class="size-4" />,
+				error: <RiCloseCircleLine class="size-4" />,
+				loading: <RiLoaderLine class="size-4 animate-spin" />,
+			}}
+			style={
+				{
+					"--normal-bg": "var(--popover)",
+					"--normal-text": "var(--popover-foreground)",
+					"--normal-border": "var(--border)",
+					"--border-radius": "var(--radius)",
+				} as CSSProperties
+			}
+			toastOptions={{
+				classNames: {
+					toast: "cn-toast",
+				},
+			}}
+			{...props}
+		/>
 	);
-}
+};
+
+export { Toaster };
