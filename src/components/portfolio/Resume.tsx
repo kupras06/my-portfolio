@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Download, ExternalLink, FileText } from "lucide-preact";
 
-const RESUME_LINK = "https://flowcv.com/resume/66ts7tevv8pe";
+const RESUME_LINK = "https://flowcv.com/resume/v22e768w1gw2";
 
 const Resume = () => (
 	<section class="py-24 px-6">
